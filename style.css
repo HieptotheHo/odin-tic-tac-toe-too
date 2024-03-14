@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: rgb(238, 86, 66);
+    --blue:rgb(37, 20, 187);
+    --black:rgb(44, 44, 44);
+}
+
+body {
+    font-family: "Radio Canada", sans-serif;
+    color: var(--black);
+    padding: 1em;
+}
+
+#title {
+    text-align: center;
+    padding: 0.5em;
+    font-size: 4rem;
+}
+
+.container {
+    padding: 2em;
+    display: flex;
+    /* align-items:center; */
+    justify-content: space-around;
+}
+
+#board {
+    width: 700px;
+    height: 700px;
+    /* border: 5px solid white; */
+    border-radius: 30px;
+    display: grid;
+    grid-template: 1fr 1fr 1fr/1fr 1fr 1fr;
+    gap: 10px ;
+    background-color: var(--black);
+    padding: 10px;
+}
+
+.tile {
+    background-color:white;
+    /* height: 33%; */
+    height: 100%;
+    /* border: 5px solid white; */
+    border-radius: 30px;
+}
+
+.tile:hover {
+    background-color: cadetblue;
+}
+.X {
+    color:var(--blue);
+    font-size: 180px;
+    text-align: center;
+}
+.O{
+    color:var(--red);
+    font-size: 180px;
+    text-align: center;
+}
+
+
+.player {
+    text-align: center;
+    font-size:2rem;
+    height: 20%;
+    width:  20%;
+    padding: 1em;
+    border-radius: 30px;
+}
+
+.player > .score {
+    font-size: 200px;
+}
+
+.one-turn {
+    background-color: var(--blue);
+}
+
+.two-turn {
+
+}
+
+.turn {
+    color: white;
+    background-color: var(--black);
+
+}
+
+#title:hover {
+    background-color: var(--black);
+    color: white;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 30px;
+
+}
+
+.modal-container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,50%);
+    top: 0;
+    left: 0;
+    /* opacity: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    visibility: hidden;
+}
+
+.modal {
+    height: 30%;
+    width: 30%;
+    opacity: 100%;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+
+.modal:hover {
+    border: 20px solid black;
+}
